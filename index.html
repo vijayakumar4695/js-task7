@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>js task7</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+ .container-fluid {
+   	background:#EE39A3;
+   	width: 500px;
+   	height:auto;
+   	margin-top: 60px;
+
+   }
+   	#A {
+   		width:250px;
+   		height: 40px;
+   		border-radius:10px;
+   		text-align:center;
+   		font-size: 18px;
+   		border-color:black; 
+
+
+   	}
+     
+     #B {
+   		width:250px;
+   		height: 40px;
+   		border-radius:10px;
+   		text-align:center;
+   		font-size: 18px;
+   		border-color:black; 
+   	}
+.btn {
+	width: 100px;
+	height: 40px;
+}
+p {
+	font-size: 18px;
+	color:white;
+}
+</style>
+
+
+<body>
+	<div class="container-fluid text-center">
+		<div class="row bg-danger">
+
+			<div class="col-lg-12 col-md-12 col-sm-12" >
+
+		<h3>DISPLAY INTERMEDIAE VALUES</h3>
+	</div>
+</div>
+		<br>
+		<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+	<b>A:	</b><input type="text" id="A" name="N1">
+	<br>
+	<br>
+	<b>B:	</b><input type="text" id="B"name="N2">
+</div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 ">
+<br>
+
+    <button  type="submit" onclick="myFunction()" class="btn btn-danger">SUBMIT</button>
+</div>
+<br>
+<br>
+<p id="demo"></p>
+
+</div>
+</div>
+
+
+<script>
+	function myFunction() {
+
+      var A=document.getElementById('A').value;
+
+       var B=document.getElementById('B').value;
+       var text=" "
+
+       if (A<B) 
+       {
+
+       	 for (var i=A;i<=B;i++)
+
+       	 {
+       	 	text += i + "<br>";
+       	 }
+
+         document.getElementById("demo").innerHTML= text
+
+       }
+        
+       else (A>B) 
+        {
+         
+         for (var i=A; i>=B;i--)
+         {
+         	text += i + "<br>" ;
+         }
+
+         document.getElementById("demo").innerHTML=text
+
+       }
+
+
+       	}
+
+
+</script>
+</body>
+</html>
